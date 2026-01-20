@@ -1,0 +1,17 @@
+<h1>Variables & Declarations Demo</h1>
+Your Age is : {{age}}<br/>
+Your Name is : {{name}}<br/>
+You Are an Employee : {{isEmployee}}<br/>
+Your Hobbies Are : 
+<ul>
+<li *ngFor='let hobby of hobbies'>{{hobby}}</li>
+</ul>
+<br/>
+<h3><u>Address</u></h3>
+Door No: {{address.doorNo}}<br/>
+Street: {{address.street}}<br/>
+City: {{address.city}}<br/><br/>
+<input type="text" [(ngModel)]="message"><br/>
+{{message}}<br/><br/>
+
+<button (click)="showMessage()">Show Message</button>

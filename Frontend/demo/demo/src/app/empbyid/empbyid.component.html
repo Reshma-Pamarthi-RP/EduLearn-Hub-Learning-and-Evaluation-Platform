@@ -1,0 +1,37 @@
+<div class="container">
+    <br/><br/>
+    <div align="center">
+    <input type="text" [(ngModel)]="empId"  placeholder="Enter id to display"><br/>
+    <button (click)="getEmpById()">Show Details</button>
+</div>
+<br/>
+<br/>
+<div *ngIf=employee>
+    <table class="table table-bordered table-striped table-hover table-sm text-center">
+    <thead>
+        <tr class="bg-info text-white">
+        <th>ID</th>
+        <th>NAME</th>
+        <th>GENDER</th>
+        <th>SALARY</th>
+        <th>DOJ</th>
+        <th>EXPERIENCE</th>
+        <th>MOBILE</th>
+        <th>COUNTRY</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>{{employee.empId}}</td>
+        <td>{{employee.empName |gender: employee.gender | uppercase}}</td>
+        <td>{{employee.gender | lowercase}}</td>
+        <td>{{employee.salary | currency: 'INR'}}</td>
+        <td>{{employee.doj |date: 'dd-MMMM-yy hh:mm:ss'}}</td>
+        <td>{{employee.doj | experience }}</td>
+        <td>{{employee.mobile | mobile: employee.country}}</td>
+        <td>{{employee.country}}</td>
+    </tr>
+    </tbody>
+    </table>
+    </div>
+</div>

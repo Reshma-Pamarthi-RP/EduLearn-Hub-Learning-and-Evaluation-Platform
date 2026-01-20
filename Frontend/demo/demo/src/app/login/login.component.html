@@ -1,0 +1,37 @@
+ <!-- <fieldset>
+    <legend>Login</legend>
+Enter Login Id: <input type="text" placeholder="enter login id" [(ngModel)]="user.loginId"><br/>
+Enter Password: <input type="password" placeholder="enter password" [(ngModel)]="user.password"><br/>
+<button (click)="loginForm()">Login</button>
+</fieldset> -->
+
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+</head>
+
+<!-- Useful for Data Validations -->
+<div class="container">
+    <form #loginForm="ngForm" class="form-group" (ngSubmit)="loginSubmit(loginForm.value)" novalidate>
+        
+        <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+        <input type="text" class="form-control" name="loginId" ngModel #loginId="ngModel" required
+            maxlength=10 minlength=4 placeholder="login id"><br />
+        </div>
+
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>    
+        <input type="password" class="form-control" name="password" ngModel required #password="ngModel"
+            maxlength=10 minlength=4 placeholder="password"><br />
+        </div>
+
+        <button class="btn btn-primary" [disabled]="!loginForm.valid">Login</button>
+    </form>
+
+    <div class="text-danger">
+        <div *ngIf="loginForm.touched && loginId.errors?.required">Please enter login id</div>
+        <div *ngIf="loginForm.touched && password.errors?.required">Please enter password</div>
+        <div *ngIf="loginForm.touched && loginId.errors?.minlength">Please enter min 4 chars </div>
+        <div *ngIf="loginForm.touched && password.errors?.minlength">Please enter min 6 chars </div>
+    </div>
+</div>
