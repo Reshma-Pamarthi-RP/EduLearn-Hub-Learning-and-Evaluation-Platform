@@ -1,0 +1,73 @@
+<!--<p>studentlogin works!</p>-->
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<head>
+   <style>
+   h1 {
+     text-align: right;
+   }
+   h2 {
+     text-align: right;
+   }
+
+
+   </style>
+   </head>
+
+
+<div class="container"><div class = "bg-img">
+   <div class="sidenav">
+         <div class="login-main-text">
+            <font color="white"><h1>Login Page</h1><br></font>
+            <!--<h2><br>Login Page</h2>-->
+         </div>
+      </div>
+      </div>
+
+      <div class="main">
+         <div class="col-md-6 col-sm-12">
+            <div class="login-form">
+               <form>
+         
+                  
+                <div class="form-group">
+                    <!--<label>Email</label>-->
+                    <font color="white"><label><h2>Email</h2></label><br></font>
+                    <input type="text" class="form-control" placeholder="EmailId" name="emailId" [(ngModel)]='loginform.emailId'>
+                 </div>
+
+                  <div class="form-group">
+                     <font color="white"><label><h2>Password</h2></label><br></font>
+                    <input type="password" class="form-control" placeholder="Password" name="password" [(ngModel)]='loginform.password'>
+                 </div>
+            
+                 <!--<div class="form-group">
+                    <label>Confirm Password</label>
+                    <input type="password" class="form-control" placeholder="Confirm Password" [(ngModel)]='customer.'>
+                 </div>-->
+                  
+                 
+                  <button type="submit" class="btn btn-green"  (click)="getStudentByUserPass()">login</button>
+
+                  
+                  
+               
+               </form>
+
+               <div class="container mt-5">
+                  <div class="row mt-5">
+                    <div class="col-md-4 mt-2 m-auto ">
+                          <button class="login-Btn" #loginRef>
+                            Login with Google<img class="social-btn-icon" alt="Login with Google" src="https://hrcdn.net/fcore/assets/google-colored-20b8216731.svg">
+                          </button>
+                    </div>   
+                  </div>
+                 
+                </div>
+            </div>
+         </div>
+      </div>

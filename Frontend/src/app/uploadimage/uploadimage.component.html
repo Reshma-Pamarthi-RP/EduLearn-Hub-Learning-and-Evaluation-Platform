@@ -1,0 +1,24 @@
+<p>uploadimage works!</p>
+<form #imageForm="ngForm" class="form-group" (ngSubmit)="OnSubmit(imageForm.value)">
+    demo:<input type="text" #demo ngModel name="demo" ><br/><br/>
+   
+    <div class="col">
+      <div class="input-field col s12">
+        <input type="text" #productName ngModel name="productName" id="productName" required>
+        <label for="productName">Product Name</label>
+      </div>
+      <div class="input-field col s12">
+        <input type="text" #description ngModel name="description" id="description" required>
+        <label for="description">Description</label>
+      </div>
+      <div class="input-field col s12">
+        <input type="text" #price ngModel name="price" id="price" required>
+        <label for="price">Price</label>
+      </div>
+    </div>
+    <div>
+        <img [src]="imageUrl" style="width:250px;height:200px;margin-left: 10px;margin-right: 10px;">
+        <input type="file" #Image accept="image/*" (change)="handleFileInput($event.target.files)">
+        <button type="submit">Upload</button>
+    </div>
+</form>

@@ -1,0 +1,22 @@
+<p>show-dbimages works!</p>
+
+<h2>List Of Products</h2>
+<div class="row offset-md-1" style="margin-top: 4px">
+<div class="col-md-3" *ngFor="let product of products">
+  <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="http://localhost:8080/RestAPI_Q2L/image/{{material.imageName}}" alt="Card image cap" />
+  <div class="card-body">
+    <p class="card-text">{{material.description}}</p>
+  </div>
+  <div class="row">
+<div class="col">
+    <div>{{material.price | currency:'USD'}}</div>
+  </div>
+  <div class="col">
+  <div><button class="btn btn-primary" (click)="addToCart(material)">Add To Cart</button></div>
+</div>
+</div> 
+</div>
+</div>
+</div>
+

@@ -1,0 +1,89 @@
+<!--<p>studentregistration works!</p>-->
+<!--<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">-->
+      <!--<link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">-->
+       <!-- <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">-->
+       <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"rel="stylesheet"id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+      <!--  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>-->
+
+
+   <!--<div class = "wrimagecard wrimagecard-topimage" style="width: 85%;">
+    <div class="wrimagecard-topimage_header" style="background-color: aqua(130, 93, 9, 0.1)">
+    <div style="text-align: center;justify-content: center;align-items: center;padding-top: 14%;">
+    <img src="assets/signup-image.jpg" align ="right">
+    </div>
+    </div>
+</div>-->
+<head>
+    <style>
+    h1 {
+      text-align: right;
+    }
+    h2 {
+      text-align: right;
+    }
+
+    </style>
+    </head>
+  
+<div class = "container">
+    <div class="sidenav">
+            <div class="login-main-text">
+                  
+                <font color="white"><h1>Registration Form</h1><br></font>
+                <!--<h1><br>Registration Form</h1>-->
+
+            </div>
+       
+        <div class = "container">
+           
+        <div class ="row row-content align-items-center">
+            <div class ="col-12 col-sm-4  order-sm-last col-md-3">
+        <div class="main">
+            
+            <div class="col-mid-6 col-sm-12">
+                <div class ="login-form">
+                    
+                    <form>
+                        <div class="form-group">
+                            <!--<label>FirstName</label>-->
+                            <font color="white"><label><h2>FirstName</h2></label><br></font>
+                            
+                            <input type="text" class="form-control" placeholder="FirstName" name="studentFirstName" [(ngModel)]='student.studentFirstName'>
+                     
+                        </div>
+                       <div class="form-group">
+                        <font color="white"><label><h2>LastName</h2></label><br></font>
+                           <input type="text" class="form-control" placeholder="LastName" name="studentLastName" [(ngModel)]='student.studentLastName'>
+                       </div>
+                       <div class="form-group">
+                        <font color="white"><label><h2>Password</h2></label><br></font>
+                           <input type="password" class="form-control" placeholder="password" name="password" [(ngModel)]='student.password'>
+                       </div>
+                       <div class="form-group">
+                        <font color="white"><label><h2>EmailId</h2></label><br></font>
+                           <input type="text" class="form-control" placeholder="emailId" name="emailId" [(ngModel)]='student.emailId'>
+                       </div>
+                       <div class="form-group">
+                        <font color="white"><label><h2>Institution</h2></label><br></font>
+                           <input type="text" class="form-control" placeholder="institution" name="Institution" [(ngModel)]='student.institution'>
+                       </div>
+                       <div class="form-group">
+                        <font color="white"><label><h2>Standard</h2></label><br></font>
+                           <input type="text" class="form-control" placeholder="standard" name="standard" [(ngModel)]='student.standard'>
+                       </div>
+                       <button type="submit" class="btn-btn-green" (click)="register()">Register</button>
+                       
+                </form>
+
+                
+                                   
+                                </div>
+                                </div>
+           </div>
+       </div>
+       </div>
+       </div>
+       </div>
+      
